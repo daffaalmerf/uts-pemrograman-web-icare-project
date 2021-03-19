@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.green {
+    background-color: #4BD79B;
+}
+
+.red {
+    background-color: #EC7575;
+}
+
+.yellow {
+    background-color: #F8F153;
+}
+
+.blue {
+    background-color: #4F66AF;
+}
+
+.pressed {
+    background-color: #C4C4C4;
+}
+
+.simon-element {
+    width: 200px;
+    height: 200px;
+    border: 10px solid black;
+    margin: 25px;
+    border-radius: 5vh;
+}
+
+@media screen and (max-width: 768px){
+    .simon-element{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 375px) and (min-width: 320px) {
+    .simon-element{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        border-radius: 4vh;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 320px) and (min-width: 0px) {
+    .simon-element{
+        width: 20px;
+        height: 20px;
+        margin: 2px;
+        border: 5px solid black;
+        border-radius: 2vh;
+    }
+    h1 {
+        font-size: 0.5rem;
+    }
+}
