@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Landing Page</title>
+</head>
+<body style="background-color: #4BD79B; color: white;">
+    <!-- Nav Bar -->
+    <section class="navigation">
+        <div class="nav-bar-container">
+            <div class="hamburger">
+                <input type="checkbox">
+                <div class ="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-element"><a href="#">Website Name</a></li>
+                    <li class="nav-element"><a href="#">Features</a></li>
+                    <li class="nav-element"><a href="#">Quotes</a></li>
+                    <li class="nav-element"><a href="#">Sign Up</a></li>
+                    <li class="nav-element"><a href="#">Contact</a></li>
+                    <li class="nav-element"><a href="#">Log In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <!-- Content -->
+    <section class="about">
+        <div class="container">
+            <div>
+                <h1>We're Here Because We Care</h1>
+                <h3>Your Way to a Steady Mind and a Healthy Social Life</h3>
+            </div>
+            <div>
+                <img class="about-image" src="image/about-image.png" style="height: 75vh;" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="features white">
+        <h1>Features</h1>
+        <div class="container">
+            <div class="feature-list">
+                <div class="feature-icon green">
+                    <img src="image/feature-icon-1.png" alt="">
+                </div>
+                <h4 class="feature-text">Keep a Daily Track of Your Mood</h4>
+            </div>
+            <div class="feature-list">
+                <div class="feature-icon white">
+                    <img src="image/feature-icon-2.png" alt="">
+                </div>
+                <h4 class="feature-text">Prevent Memory Loss with Minigames</h4>
+            </div>
+            <div class="feature-list">
+                <div class="feature-icon green">
+                    <img src="image/feature-icon-3.png" alt="">
+                </div>
+                <h4 class="feature-text">Refresh Your Mind Through Meditation</h4>
+            </div>
+        </div>
+    </section>
+    <section class="quotes">
+        <div class="container-between">
+            <h1 class="next-left">&lt</h1>
+            <div class="quote-active" id="quote-1">
+                <img src="image/quote-person-1.png" alt="">
+                <h1>The only journey is the journey within.</h1>
+                <h4>Rainer Maria Rilke</h4>
+            </div>
+            <div class="quote-inactive" id="quote-2">
+                <img src="image/quote-person-2.png" alt="">
+                <h1>Just because you don’t understand it doesn’t mean it isn’t so.</h1>
+                <h4>Daniel Handler</h4>
+            </div>
+            <div class="quote-inactive" id="quote-3">
+                <img src="image/quote-person-3.png" alt="">
+                <h1>The strongest people are not those who show strength in front of the world but those who fight and win battles that others do not know anything about.</h1>
+                <h4>Jonathan Harnisch</h4>
+            </div>
+            <h1 class="next-right">&gt</h1>
+        </div>
+    </section>
+    <section class="sign-up white">
+        <div class="container" style="flex-direction: column;">
+            <h1>Be a Part of Our Community</h1>
+            <form action="register.html">
+                <input class="form-button" type="submit" value="Sign Up">
+            </form>
+        </div>
+    </section>
+    <section class="contact">
+        <div>
+            <img class="contact-icon" src="image/contact-instagram.png" alt="">
+            <img class="contact-icon" src="image/contact-twitter.png" alt="">
+            <img class="contact-icon" src="image/contact-linkedin.png" alt="">
+            <img class="contact-icon" src="image/contact-email.png" alt="">
+        </div>
+        <p>©2021 NamaWeb. All rights reserved</p>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
