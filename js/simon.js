@@ -1,25 +1,33 @@
-var level = 0; // declare starting level
+var level = 0; // deklarasi level awal
 
-var colors = ["green", "red", "yellow", "blue"]; // declare 4 colors in simon game
+var colors = ["green", "red", "yellow", "blue"]; // deklarasi 4 warna dalam permainan
 
-var userPattern = []; // declare the pattern to store user's choice
+var userPattern = []; // deklarasi pola untuk menyimpan pilihan pemain
 
-var gamePattern = []; // declare the pattern made through randomization
+var gamePattern = []; // deklarasi pola yang dibuat melalui pengacakan
 
-$("body").keypress(function(event){
+var started = false; // deklarasi permainan belum dimulai
+
+$("body").keypress(function(event){ // shortcut
     console.log(event.key);
     if(event.key === "Enter"){
-    $(".level-text").html("Level " + level); // increments level
-    nextSequence();
+        if(started == false){
+            $(".level-text").html("Level " + level);
+            nextSequence();
+            started = true;
+        }
     } else if(event.key === "r" || event.key === "R"){
         level = 0;
         gamePattern = [];
         userPattern = [];
         $(".level-text").html("Press Enter to Start");
+        started = false;
+    } else if(event.key === " "){
+        window.location.replace("profile.html");
     }
 });
 
-$(".simon-element").click(function() {
+$(".simon-element").click(function() { // pemilihan pola 
 
     var id = $(this).attr("id");
     var audioButton = new Audio("audio/" + id + ".mp3");
@@ -39,7 +47,7 @@ $(".simon-element").click(function() {
 
 })
 
-function nextSequence(){
+function nextSequence(){ // pola berikutnya
 
     userPattern = [];
 
@@ -59,7 +67,7 @@ function nextSequence(){
 
 }
 
-function checkPattern(userPatternLength){
+function checkPattern(userPatternLength){ // pengecekan pola
 
     if(gamePattern[userPatternLength - 1] === userPattern[userPatternLength - 1]){
         if(gamePattern.length === userPattern.length){
@@ -76,6 +84,7 @@ function checkPattern(userPatternLength){
         level = 0;
         gamePattern = [];
         userPattern = [];
+        started = false;
     }
 
 }

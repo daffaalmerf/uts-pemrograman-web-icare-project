@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCare Project - Profile Page</title>
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="icon" href="image/icon.png">
+</head>
+<body>
+    <!-- Profile Header -->
+    <div id="profile-background-image" style="color: white; padding: 20px 0;">
+        <div class="container-navbar-profile">
+            <h4>iCare Project</h4>
+            <a href="login.html" style="text-decoration: none;"><h4 style="color: #EC7575;">Log Out</h4></a>
+        </div>
+            <div style="text-align: center"> 
+                <h3>Hello, there!</h3>
+                <h4>What would you like to do today?</h4>
+                <div>
+                    <a href="meditation.html"><input type="button" value="Meditate" class="button"></a>
+                    <a href="simon.html"><input type="button" value="Play Minigame" class="button"></a>
+                </div>
+        </div>
+    </div>
+    <!-- Mood Tracker -->
+    <h1 style="text-align: center;">Mood Tracker</h1>
+    <div id="mood-toggle" class="hide-toggle">Hide Options</div>
+    <div class="add-mood">
+        <div>
+            <h3>How are you feeling today?</h3>
+            <div class="container option">
+                <div class="center">
+                    <div class="mood-icon" id="awesome"></div>
+                    <h4 id="awesome-text">Awesome</h4>
+                </div>
+                <div class="center">
+                    <div class="mood-icon" id="good"></div>
+                    <h4 id="good-text">Good</h4>
+                </div>
+                <div class="center">
+                    <div class="mood-icon" id="meh"></div>
+                    <h4 id="meh-text">Meh</h4>
+                </div>
+                <div class="center">
+                    <div class="mood-icon" id="bad"></div>
+                    <h4 id="bad-text">Bad</h4>
+                </div>
+                <div class="center">
+                    <div class="mood-icon" id="awful"></div>
+                    <h4 id="awful-text">Awful</h4>
+                </div>
+            </div>
+            <p id="invalidMood" class="invalid"></p>
+        </div>
+        <div>
+            <h3>What have you been up to?</h3>
+            <textarea id="mood-desc" rows="3" cols="50"></textarea>
+            <p id="invalidDesc" class="invalid"></p>
+        </div>
+        <input type="button" value="Add Mood" id="addMoodButton" class="button">
+    </div>
+    <div id="mood-list"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

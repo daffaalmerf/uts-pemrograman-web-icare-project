@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>iCare Project - Login Page</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="image/icon.png">
 </head>
 <body>
-    <div class="container-between">
-        <div class="image">
-            <img class="img-form-1" src="image/logo-background.png" alt="">
-            <img class="img-form-2" src="image/logo-background-full.png" alt="">
-            <img class="img-form-3" src="image/logo-background-full-small.png" style="max-width: 40vh" alt="">
-        </div>
-        <div>
+    <div class="container-flex-start">
+        <!-- Image -->
+        <div class="loginRegisterImage"></div>
+        <!-- Login Form -->
+        <div class="form-content">
+            <a href="index.html" style="text-decoration: none;"><h1 class="web-name">iCare Project</h1></a>
             <h1 class="title">Log In</h1>
-            <form action="">
+            <form action="profile.html">
                 <div class="container-between">
-                    <label class="form-label" for="inputEmail">E-mail Address</label>
-                    <input class="form-input" type="email" placeholder="E-mail Address" id="inputEmail" required>
+                    <label class="form-label" for="loginEmail">E-mail Address</label>
+                    <input class="form-input" type="email" placeholder="E-mail Address" id="loginEmail" required>
                 </div>
+                <span id="loginEmailInvalid" class="form-invalid"></span>
                 <div class="container-between">
-                    <label class="form-label" for="inputPassword">Password</label>
-                    <input class="form-input" type="password" placeholder="Password" id="inputPassword" required>
+                    <label class="form-label" for="loginPassword">Password</label>
+                    <input class="form-input" type="password" placeholder="Password" id="loginPassword" required>
                 </div>
+                <span id="loginPasswordInvalid" class="form-invalid"></span>
                 <p style="text-align: right;"><a href="">Forgot Your Password?</a></p>
-                <input class="form-button" type="button" value="Log In">
+                <input id="buttonLogin" class="form-button" type="submit" value="Log In">
                 <p>Don't Have an Account? <a href="register.html">Register Here</a></p>
             </form>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/validation.js"></script>
 </body>
 </html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCare Project - Meditation</title>
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="icon" href="image/icon.png">
+</head>
+<body id="meditation-body">
+    <!-- Timer -->
+    <div id="timer">
+        <svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="transform: scaleX(-1)">
+            <g style="fill: none; stroke:none">
+                <circle cx="50" cy="50" r="45"stroke-width="4px" stroke="grey"/>
+                <path id="timer-path"
+                    stroke-dasharray="283"
+                    style="color: #4BD79B; stroke-width: 4px; stroke-linecap: round;
+                    transform: rotate(90deg); transform-origin: center; transition: all 1s linear;
+                    stroke: currentColor;"
+                    d="
+                        M 50, 50
+                        m -45, 0
+                        a 45,45 0 1,0 90,0
+                        a 45,45 0 1,0 -90,0"></path>
+            </g>
+        </svg>
+        <span id="time">00:00</span>
+    </div>
+    <!-- Options -->
+    <div id="options">
+        <h2>What atmosphere are you into now?</h2>
+        <div class="container option" style="text-align: center;">
+            <div>
+                <div id="forest" class="theme-option option"></div>
+                <h3 id="forest-text">Forest</h3>
+            </div>
+            <div style="margin-left: 3%;">
+                <div id="rain" class="theme-option option"></div>
+                <h3 id="rain-text">Rain</h3>
+            </div>
+            <div style="margin-left: 3%;">
+                <div id="ocean" class="theme-option option"></div>
+                <h3 id="ocean-text">Ocean</h3>
+            </div>
+        </div>
+    <p id="invalidTheme" class="invalid"></p>
+    <h2>How long would you like to meditate?</h2>
+    <div class="container option" style="justify-content: center; text-align: center;">
+        <div id="15-minutes" class="text-option option">
+            <h3>15 minutes</h3>
+        </div>
+        <div id="30-minutes" style="margin-left: 3%;" class="text-option option">
+            <h3>30 minutes</h3>
+        </div>
+        <div id="45-minutes" style="margin-left: 3%;" class="text-option option">
+            <h3>45 minutes</h3>
+        </div>
+    </div>
+    <p id="invalidDuration" class="invalid"></p>
+    <button id="start-button" class="button">Start</button>
+    </div>
+    <h1 id="meditation-status"></h1>
+    <!-- Meditation Instructions -->
+    <div id="instructions" style="justify-content:center;">
+        <div class="container">
+            <div><h1>Return (Spacebar)</h1></div>
+            <div style="margin-left: 3%;"><h1>Pause (P)</h1></div>
+        </div>
+        <div class="container">
+            <div><h1>Continue (Enter)</h1></div>
+            <div style="margin-left: 3%;"><h1>Restart (R)</h1></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/meditation.js"></script>
+</body>
+</html>

@@ -1,25 +1,22 @@
+var hamburgerClicked = false;
 var currentQuote = 0;
-
 var quotes = ["quote-1", "quote-2", "quote-3"];
 
-$(".next-right").click(function() {
+const clickHamburger = document.querySelector('.hamburger input');
+const navList = document.querySelector('nav ul');
+
+clickHamburger.addEventListener('click', function() { // toggle hamburger
+    navList.classList.toggle('slide');
+});
+
+
+$(".next-right").click(function() { // quote selanjutnya
     fadeNextQuote();
 })
- // aku break bentar wkwk, ari kalo mau bantu buat responsif
- // boleh banget
- // css ne yg mn?
- // ada di folderr
- // kalau cara buka jadi webnya bisa kah?
- // coba ss ke wa cik, tampilan ari gimana
- // ari udah install extension live server belom?
- // kalo belom, install dulu
- // udah
- // ohh iniiii, di shared servers, pilih live server
- // nah nampil webnya
- // okeee sok lanjutin
-$(".next-left").click(function() {
+
+$(".next-left").click(function() { // quote sebelumnya
     fadePrevQuote();
-})
+});
 
 function fadeNextQuote(){
     $("#" + quotes[currentQuote]).fadeOut(500);

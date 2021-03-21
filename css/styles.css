@@ -2,19 +2,19 @@
 
 /* Landing Page */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+
 nav{
-    justify-content: space-around;
     padding: 8px 0;
     align-items: center;
-}
-
-nav ul{
     display: flex;
-    
 }
 
 .white {
@@ -24,10 +24,18 @@ nav ul{
 
 .nav-list {
     list-style-type: none;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 .nav-element {
-    display: flex;
+    display: inline;
+    align-items: center;
+    margin-left: 20px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
 }
 
 .nav-element a {
@@ -42,177 +50,11 @@ nav ul{
     margin: 8px;
 }
 
+/* Navbar Hamburger */
+
 .hamburger {
     display: none;
 }
-
-/* Landing Page - About Us Section */
-
-.about-image {
-    max-height: 60vh;
-}
-
-.container, .container-between, .container-row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.container-between {
-    justify-content: space-between;
-    text-align: center;
-}
-
-/* Landing Page - Features Section */
-
-.features {
-    padding: 1vh 0;
-    text-align: center;
-}
-
-.feature-list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    margin: 2rem 4rem;
-}
-
-.feature-icon {
-    width: max-content;
-    height: max-content;
-    border-radius: 100%;
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 16px;
-}
-
-.feature-text {
-    max-width: 25vh;
-}
-
-/* Landing Page - Quotes Section */
-
-.quote-active {
-    display: inline-block;
-    text-align: center;
-}
-
-.quote-inactive {
-    display: none;
-}
-
-
-/* Landing Page - Sign Up Section */
-
-.sign-up {
-    padding: 12vh 0;
-    text-align: center;
-}
-
-/* Landing Page - Contact Section */
-
-.contact {
-    text-align: center;
-    padding: 4vh 0;
-}
-
-.contact-icon {
-    max-width: 24px;
-    margin: 0 8px;
-}
-
-/* Simon Page */
-
-.green {
-    background-color: #4BD79B;
-}
-
-.red {
-    background-color: #EC7575;
-}
-
-.yellow {
-    background-color: #F8F153;
-}
-
-.blue {
-    background-color: #4F66AF;
-}
-
-.pressed {
-    background-color: #C4C4C4;
-}
-
-.simon-element {
-    width: 200px;
-    height: 200px;
-    border: 10px solid black;
-    margin: 25px;
-    border-radius: 5vh;
-}
-
-/* Login and Sign Up Page */
-
-.form-label {
-    font-weight: bold;
-}
-
-.form-input {
-    margin: 8px;
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid #656262;
-}
-
-.form-input:focus {
-    border: 1px solid #4BD79B;
-    box-shadow: 0 0 3px#4BD79B;
-    outline: none;
-}
-
-.form-button {
-    padding: 12px 48px;
-    background-color: #4BD79B;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    transition: 0.4s ease;
-}
-
-.form-button:hover {
-    background-color: #4CE2B8;
-}
-
-p {
-    font-weight: bold;
-}
-
-p a {
-    text-decoration: none;
-    color: #4BD79B;
-}
-
-p a:hover {
-    color: #4CE2B8;
-}
-
-.title {
-    color: #4BD79B;
-}
-
-.img-form-2, .img-form-3 {
-    display: none;
-    flex-grow: 1;
-}
-/* section */
 
 .hamburger input{
     position: absolute;
@@ -222,7 +64,7 @@ p a:hover {
     top: 5px;
     opacity: 0.0;
     cursor: pointer;
-    z-index: 2;
+    z-index: 4;
     color: #fff;
 }
 
@@ -233,9 +75,12 @@ p a:hover {
     background-color: #fdfdfd;
     border-radius: 5px;
     transition: all 0.5s;
+   
+    
 }
 
-/* Animasinya */
+/* Navbar Animation */
+
 .hamburger div:nth-child(2){
     transform-origin: 0 0;
 }
@@ -258,60 +103,328 @@ p a:hover {
     transform: scale(0);
 }
 
+/* Landing Page - About Us Section */
+
+.about-image {
+    max-height: 60vh;
+}
+
+.container, .container-column, .container-between, .container-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-between {
+    text-align: center;
+    justify-content: space-between;
+}
+
+.container-column {
+    flex-direction: column;
+}
+
+/* Landing Page - Features Section */
+
+.features {
+    padding: 1vh 0;
+    text-align: center;
+}
+
+.feature-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 16px 32px;
+}
+
+.green {
+    background-color: #4BD79B;
+}
+
+
+.feature-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;    
+}
+
+#feature-icon-1{
+    content: url('../image/landing/feature-icon-1.png');
+}
+
+#feature-icon-2{
+    content: url('../image/landing/feature-icon-2.png');
+}
+
+#feature-icon-3{
+    content: url('../image/landing/feature-icon-3.png');
+}
+
+.feature-text {
+    max-width: 25vh;
+}
+
+/* Landing Page - Quotes Section */
+
+.quote-active {
+    display: inline-block;
+    text-align: center;
+}
+
+.quote-inactive {
+    display: none;
+}
+
+.quote-person {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: auto;
+}
+
+#quote-person-1{
+    content: url('../image/landing/quote-person-1.png');
+}
+
+#quote-person-2{
+    content: url('../image/landing/quote-person-2.png');
+}
+
+#quote-person-3{
+    content: url('../image/landing/quote-person-3.png');
+}
+
+/* Landing Page - Sign Up Section */
+
+.sign-up {
+    padding: 12vh 0;
+    text-align: center;
+}
+
+/* Landing Page - Contact Section */
+
+.contact {
+    text-align: center;
+    padding: 4vh 0;
+}
+
+.contact-icon {
+    max-width: 24px;
+    margin: 0 8px;
+}
+
+/* Login and Sign Up Page */
+
+.form-label {
+    font-weight: bold;
+    display: inline-block;
+ }
+
+.form-content{
+    width: 100%; justify-content: 
+    center; display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+}
+
+.form-input {
+    margin: 8px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #656262;
+}
+
+.form-input:focus {
+    border: 1px solid #4BD79B;
+    box-shadow: 0 0 3px#4BD79B;
+    outline: none;
+}
+
+.form-button {
+    padding: 12px 0;
+    width: 200px;
+    background-color: #4BD79B;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    transition: 0.4s ease;
+    margin: 8px 0;
+}
+
+.form-invalid {
+    color: #EC7575;
+    text-align: center;
+}
+
+.form-button:hover {
+    background-color: #4CE2B8;
+}
+
+p {
+    font-weight: bold;
+}
+
+p a {
+    text-decoration: none;
+    color: #4BD79B;
+}
+
+p a:hover {
+    color: #4CE2B8;
+}
+
+.web-name {
+    color: #4F66AF;;
+}
+
+.title {
+    color: #4BD79B;
+}
+
+.loginRegisterImage {
+    content: url('../image/loginregister/default-logo-background.png');
+    object-fit: cover;
+    max-height: 100vh;
+}
+
+.container-flex-start{
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center
+}
+
 @media screen and (max-width: 768px){
-
-    .hamburger {
-        display: inline-block;
+    .hamburger{
+        display: block;
+        z-index: 3;
     }
 
-    .container-between{
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 40px;
+        height: 90vh;
+        bottom: 90vh;
+        width: 100%;
+        justify-content: space-evenly(10px);
+        align-items: center;
+        transition: all 1s;
+        flex-direction: column;
+        z-index: -1;
+        background-color: #4BD79B;
+        transform: translateX(-100%);
+        opacity: 0;
+        z-index: 0;
+        border-bottom-left-radius: 2vh;
+        border-bottom-right-radius: 2vh;
+    }
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .nav-element{
+        width: 50%;
+    }
+
+    .container, .container-between, .container-flex-start{
         flex-direction: column;
     }
 
-    .container{
-        flex-direction: column;
-    }
-
-    .img-form-1 {
-        display: none;
-    }
-
-    .img-form-2{
-        display: inline-block;
-        width: auto;
+    .loginRegisterImage {
+        content: url('../image/loginregister/medium-logo-background.png');
     }
 
 }
 
 @media screen and (max-width: 375px) and (min-width: 0px){
 
-    .hamburger {
+    .about-image{
+        max-height: 10vh;
+    }
+
+    h1, h2, h3, h4, p, .form-input, .form-label {
+        font-size: 0.75rem;
+    }
+
+    .form-input {
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid #656262;
+    }
+
+    .hamburger{
         display: block;
+        z-index: 3;
     }
 
-    .nav-element{
-        display: none;
-    }
-
-    .container-between{
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 20px;
+        height: 40vh;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: all 1s;
         flex-direction: column;
+        z-index: -1;
+        background-color: #4BD79B;
+        width: 100%;
+        transform: translateX(-100%);
+        opacity: 0;
+        z-index: 0;
+        border-bottom-left-radius: 2vh;
+        border-bottom-right-radius: 2vh;
     }
 
-    .container{
-        flex-direction: column;
-    }
-
-    .img-form-1, .img-form-2 {
-        display: none;
-    }
-
-    .image{
+    .nav-element {
+        display: inline;
+        align-items: center;
+        font-weight: bold;
+        align-items: center;
         text-align: center;
+        font-size: 8px;
     }
 
-    .img-form-3{
-        display: inline-block;
-        width: auto;
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
     }
+
+    .container, .container-between{
+        flex-direction: column;
+    }
+
+    .feature-list{
+        margin: 16px 0;
+    }
+
+    .feature-icon, .quote-person {
+        width: 50px;
+        height: 50px;
+    }
+
+    .loginRegisterImage {
+        content: url('../image/loginregister/small-logo-background.png');
+        object-fit: cover;
+    }
+
+    .form-button{
+        max-width: 50px;
+        font-size: 6px;
+    }
+
+    .contact-icon{
+        max-width: 12px;
+    }
+
 }
 

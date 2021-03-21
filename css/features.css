@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-flex-start {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Simon Page */
+
+.green {
+    background-color: #4BD79B;
+}
+
+.red {
+    background-color: #EC7575;
+}
+
+.yellow {
+    background-color: #F8F153;
+}
+
+.blue {
+    background-color: #4F66AF;
+}
+
+.pressed {
+    background-color: #C4C4C4;
+}
+
+.simon-element {
+    width: 200px;
+    height: 200px;
+    border: 10px solid black;
+    margin: 25px;
+    border-radius: 5vh;
+}
+
+/* Features - Meditation Page */
+
+#meditation-body{
+    background-image: url('../image/meditation/default-background.png');
+    object-fit: cover;
+    color: white;
+    text-align: center;
+}
+
+.theme-option {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 5px;
+}
+
+.theme-option-clicked {
+    border: 5px solid #4BD79B;
+}
+
+#forest {
+    background-image: url('../image/meditation/forest-icon.png');
+}
+
+#ocean {
+    background-image: url('../image/meditation/ocean-icon.png');
+}
+
+#rain {
+    background-image: url('../image/meditation/rain-icon.png')
+}
+
+.text-clicked {
+    color: #4BD79B;
+}
+
+.text-option, .text-option-clicked {
+    padding: 4px 8px;
+    border: 5px solid #4BD79B;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+.text-option-clicked {
+    background-color: #4BD79B;
+}
+
+.text-option:hover{
+    background-color: #4BD79B;
+    transition: 0.3s;
+}
+
+.invalid {
+    color: #EC7575;
+}
+
+.button {
+    padding: 12px 0;
+    width: 200px;
+    background-color: #4BD79B;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    transition: 0.4s ease;
+    margin: 16px 0;
+}
+
+.button:hover {
+    background-color: #4CE2B8;
+}
+
+#timer {
+    position: relative; 
+    width: 375px; 
+    height: 375px; 
+    display: block; 
+    margin: auto;
+}
+
+#time {
+    font-size: 48px; 
+    position: absolute; 
+    width: 375px; 
+    height: 375px; 
+    top: 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+/* Profile Page */
+
+#profile-background-image {
+    background-color: #4F66AF;
+}
+
+.container-navbar-profile {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 0 50px;
+}
+
+.show-toggle {
+    color: #4BD79B;
+    text-align: center;
+}
+
+.hide-toggle {
+    color: #EC7575;
+    text-align: center;
+}
+
+.add-mood {
+    text-align: center;
+}
+
+.mood-icon {
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    margin: 0 8px;
+}
+
+#awesome{
+    content: url('../image/mood/awesome.png');
+}
+
+#awesome:hover{
+    content: url('../image/mood/awesome-picked.png');
+}
+
+#good{
+    content: url('../image/mood/good.png');
+}
+
+#good:hover{
+    content: url('../image/mood/good-picked.png');
+}
+
+#meh{
+    content: url('../image/mood/meh.png');
+}
+
+#meh:hover{
+    content: url('../image/mood/meh-picked.png');
+}
+
+#bad{
+    content: url('../image/mood/bad.png');
+}
+
+#bad:hover{
+    content: url('../image/mood/bad-picked.png');
+}
+
+#awful{
+    content: url('../image/mood/awful.png');
+}
+
+#awful:hover{
+    content: url('../image/mood/awful-picked.png');
+}
+
+.center {
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px){
+    .simon-element{
+        width: 100px;
+        height: 100px;
+    }
+    .mood-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 375px) and (min-width: 320px) {
+    .simon-element{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        border-radius: 4vh;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    .container, .container-flex-start{
+        flex-direction: column;
+    }
+    
+    .mood-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    #mood-desc {
+        width: 20em;
+    }
+
+}
+
+@media screen and (max-width: 320px) and (min-width: 0px) {
+
+    .simon-element{
+        width: 20px;
+        height: 20px;
+        margin: 2px;
+        border: 5px solid black;
+        border-radius: 2vh;
+    }
+
+    h1, h2, h3, h4, p {
+        font-size: 0.5rem;
+    }
+
+    #timer, #time {
+        max-width: 100px;
+        max-height: 100px;
+        font-size: 24px;
+    }
+
+    .container, .container-flex-start, .container-navbar-profile{
+        flex-direction: column;
+    }
+
+    .container-navbar-profile{
+        margin: 10px 0;
+    }
+
+    #mood-toggle{
+        font-size: 8px;
+    }
+
+    .mood-icon, .theme-option {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #mood-desc {
+        width: 5em;
+        font-size: 8px;
+    }
+
+    .button{
+        max-width: 50px;
+        font-size: 6px;
+    }
+
+}
