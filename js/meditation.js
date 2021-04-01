@@ -134,12 +134,17 @@ function countDown(){ // perhitungan durasi waktu tersisa dan yang telah dilewat
             var seconds = timeLeft % 60;
             seconds = seconds < 10 ? `0${seconds}` : seconds;
 
-            
             $("#time").html(minutes + ':' + seconds);
 
             if(timeLeft <= 10 && timeLeft > 0){
                 audioVolume -= 0.1;
                 audioChoose.volume = audioVolume;
+            }
+
+            if(timeLeft <= 10 && timeLeft > 5){
+                $("#timer-path").css("stroke", "orange");
+            } else if (timeLeft <= 5 && timeLeft > -1){
+                $("#timer-path").css("stroke", "red");
             }
 
             dashArray();

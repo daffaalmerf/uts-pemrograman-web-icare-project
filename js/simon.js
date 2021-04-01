@@ -39,7 +39,7 @@ $(".simon-element").click(function() { // pemilihan pola
 
         $(this).addClass("pressed");
         setTimeout(() => {
-        $(this).removeClass("pressed");
+            $(this).removeClass("pressed");
         }, 150);
 
         checkPattern(userPattern.length);
@@ -61,8 +61,8 @@ function nextSequence(){ // pola berikutnya
         audioChoose.play();
         $("." + randomColor).fadeIn(100).fadeOut(100).fadeIn(100);
     }, 500);
-    gamePattern.push(randomColor);
 
+    gamePattern.push(randomColor);
     console.log(gamePattern);
 
 }
@@ -88,5 +88,4 @@ function checkPattern(userPatternLength){ // pengecekan pola
     }
 
 }
-
 

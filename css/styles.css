@@ -76,7 +76,6 @@ nav{
     border-radius: 5px;
     transition: all 0.5s;
    
-    
 }
 
 /* Navbar Animation */
@@ -109,7 +108,7 @@ nav{
     max-height: 60vh;
 }
 
-.container, .container-column, .container-between, .container-row{
+.container, .container-column, .container-between, .container-row, .container-flex-start{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,6 +117,10 @@ nav{
 .container-between {
     text-align: center;
     justify-content: space-between;
+}
+
+.container-flex-start {
+    justify-content: flex-start;
 }
 
 .container-column {
@@ -204,6 +207,33 @@ nav{
     text-align: center;
 }
 
+.button-1, .button-2 {
+    padding: 12px 0;
+    width: 200px;
+    background-color: #4BD79B;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    transition: 0.4s ease;
+    margin: 16px 0;
+}
+
+.button-2 {
+    border: 2px solid white;
+    margin: 5px;
+}
+
+.button-1:hover {
+    background-color: #4CE2B8;
+}
+
+.button-2:hover {
+    color: #4BD79B;
+    background-color: white;
+}
+
 /* Landing Page - Contact Section */
 
 .contact {
@@ -216,91 +246,75 @@ nav{
     margin: 0 8px;
 }
 
-/* Login and Sign Up Page */
+/* Profile Page */
 
-.form-label {
-    font-weight: bold;
-    display: inline-block;
- }
-
-.form-content{
-    width: 100%; justify-content: 
-    center; display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+.show-toggle {
+    color: #4BD79B;
     text-align: center;
 }
 
-.form-input {
-    margin: 8px;
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid #656262;
-}
-
-.form-input:focus {
-    border: 1px solid #4BD79B;
-    box-shadow: 0 0 3px#4BD79B;
-    outline: none;
-}
-
-.form-button {
-    padding: 12px 0;
-    width: 200px;
-    background-color: #4BD79B;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    transition: 0.4s ease;
-    margin: 8px 0;
-}
-
-.form-invalid {
+.hide-toggle {
     color: #EC7575;
     text-align: center;
 }
 
-.form-button:hover {
-    background-color: #4CE2B8;
+.add-mood {
+    text-align: center;
 }
 
-p {
-    font-weight: bold;
+.mood-icon {
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    margin: 0 8px;
 }
 
-p a {
-    text-decoration: none;
-    color: #4BD79B;
+#awesome{
+    content: url('../image/mood/awesome.png');
 }
 
-p a:hover {
-    color: #4CE2B8;
+#awesome:hover{
+    content: url('../image/mood/awesome-picked.png');
 }
 
-.web-name {
-    color: #4F66AF;;
+#good{
+    content: url('../image/mood/good.png');
 }
 
-.title {
-    color: #4BD79B;
+#good:hover{
+    content: url('../image/mood/good-picked.png');
 }
 
-.loginRegisterImage {
-    content: url('../image/loginregister/default-logo-background.png');
-    object-fit: cover;
-    max-height: 100vh;
+#meh{
+    content: url('../image/mood/meh.png');
 }
 
-.container-flex-start{
-    display: flex; 
-    justify-content: flex-start;
-    align-items: center
+#meh:hover{
+    content: url('../image/mood/meh-picked.png');
+}
+
+#bad{
+    content: url('../image/mood/bad.png');
+}
+
+#bad:hover{
+    content: url('../image/mood/bad-picked.png');
+}
+
+#awful{
+    content: url('../image/mood/awful.png');
+}
+
+#awful:hover{
+    content: url('../image/mood/awful-picked.png');
+}
+
+.center {
+    text-align: center;
 }
 
 @media screen and (max-width: 768px){
+    
     .hamburger{
         display: block;
         z-index: 3;
@@ -335,12 +349,17 @@ p a:hover {
         width: 50%;
     }
 
-    .container, .container-between, .container-flex-start{
+    .container, .container-between{
         flex-direction: column;
     }
 
-    .loginRegisterImage {
-        content: url('../image/loginregister/medium-logo-background.png');
+    .mood-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    #mood-desc {
+        width: 20em;
     }
 
 }
@@ -353,12 +372,6 @@ p a:hover {
 
     h1, h2, h3, h4, p, .form-input, .form-label {
         font-size: 0.75rem;
-    }
-
-    .form-input {
-        padding: 5px;
-        border-radius: 4px;
-        border: 1px solid #656262;
     }
 
     .hamburger{
@@ -399,7 +412,7 @@ p a:hover {
         transform: translateX(0);
     }
 
-    .container, .container-between{
+    .container, .container-between, .container-flex-start{
         flex-direction: column;
     }
 
@@ -412,18 +425,27 @@ p a:hover {
         height: 50px;
     }
 
-    .loginRegisterImage {
-        content: url('../image/loginregister/small-logo-background.png');
-        object-fit: cover;
-    }
-
-    .form-button{
-        max-width: 50px;
-        font-size: 6px;
-    }
-
     .contact-icon{
         max-width: 12px;
+    }
+
+    #mood-toggle{
+        font-size: 8px;
+    }
+
+    .mood-icon, .theme-option {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #mood-desc {
+        width: 5em;
+        font-size: 8px;
+    }
+
+    .button-1, .button-2{
+        max-width: 50px;
+        font-size: 6px;
     }
 
 }

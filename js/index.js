@@ -9,7 +9,6 @@ clickHamburger.addEventListener('click', function() { // toggle hamburger
     navList.classList.toggle('slide');
 });
 
-
 $(".next-right").click(function() { // quote selanjutnya
     fadeNextQuote();
 })

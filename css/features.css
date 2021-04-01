@@ -139,84 +139,6 @@ body{
     justify-content: center;
 }
 
-/* Profile Page */
-
-#profile-background-image {
-    background-color: #4F66AF;
-}
-
-.container-navbar-profile {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    margin: 0 50px;
-}
-
-.show-toggle {
-    color: #4BD79B;
-    text-align: center;
-}
-
-.hide-toggle {
-    color: #EC7575;
-    text-align: center;
-}
-
-.add-mood {
-    text-align: center;
-}
-
-.mood-icon {
-    width: 100px;
-    height:100px;
-    border-radius: 50%;
-    margin: 0 8px;
-}
-
-#awesome{
-    content: url('../image/mood/awesome.png');
-}
-
-#awesome:hover{
-    content: url('../image/mood/awesome-picked.png');
-}
-
-#good{
-    content: url('../image/mood/good.png');
-}
-
-#good:hover{
-    content: url('../image/mood/good-picked.png');
-}
-
-#meh{
-    content: url('../image/mood/meh.png');
-}
-
-#meh:hover{
-    content: url('../image/mood/meh-picked.png');
-}
-
-#bad{
-    content: url('../image/mood/bad.png');
-}
-
-#bad:hover{
-    content: url('../image/mood/bad-picked.png');
-}
-
-#awful{
-    content: url('../image/mood/awful.png');
-}
-
-#awful:hover{
-    content: url('../image/mood/awful-picked.png');
-}
-
-.center {
-    text-align: center;
-}
-
 
 @media screen and (max-width: 768px){
     .simon-element{
@@ -241,17 +163,8 @@ body{
         font-size: 1rem;
     }
 
-    .container, .container-flex-start{
+    .container {
         flex-direction: column;
-    }
-    
-    .mood-icon {
-        width: 55px;
-        height: 55px;
-    }
-
-    #mood-desc {
-        width: 20em;
     }
 
 }
@@ -276,29 +189,11 @@ body{
         font-size: 24px;
     }
 
-    .container, .container-flex-start, .container-navbar-profile{
+    .container {
         flex-direction: column;
     }
 
-    .container-navbar-profile{
-        margin: 10px 0;
-    }
-
-    #mood-toggle{
-        font-size: 8px;
-    }
-
-    .mood-icon, .theme-option {
-        width: 40px;
-        height: 40px;
-    }
-    
-    #mood-desc {
-        width: 5em;
-        font-size: 8px;
-    }
-
-    .button{
+    .button {
         max-width: 50px;
         font-size: 6px;
     }

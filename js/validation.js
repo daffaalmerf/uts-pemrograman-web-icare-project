@@ -30,7 +30,7 @@ function validateInputLogin(event) { // validasi log in
 		setMessageFor("loginEmail", "");
 	}
 
-	if(loginPasswordValue.length < 8 || loginPasswordValue.length > 12){
+	if(loginPasswordValue.length < 8 || loginPasswordValue.length > 12 || !(isPassword(loginPasswordValue))){
 		setMessageFor("loginPassword", "Invalid Password");
 		event.preventDefault();
 	} else {
@@ -60,14 +60,15 @@ function validateInputRegister(event) { // validasi register
 		setMessageFor("regisEmail", "");
 	}
 
-	if(regisPasswordValue.length < 8 || regisPasswordValue.length > 12){
+	if(regisPasswordValue.length < 8 || regisPasswordValue.length > 12 || !(isPassword(regisPasswordValue))){
 		setMessageFor("regisPassword", "Invalid Password");
 		event.preventDefault();
 	} else {
 		setMessageFor("regisPassword", "");
 	}
 
-    if(regisPasswordConfirmValue.length < 8 || regisPasswordConfirmValue.length > 12 || regisPasswordConfirmValue != regisPasswordValue){
+    if(regisPasswordConfirmValue.length < 8 || regisPasswordConfirmValue.length > 12 ||
+		regisPasswordConfirmValue != regisPasswordValue || !(isPassword(regisPasswordConfirmValue))){
 		setMessageFor("regisPasswordConfirm", "Invalid Password Confirmation");
 		event.preventDefault();
 	} else {
@@ -82,6 +83,10 @@ function setMessageFor(input, message) { // memperbarui status masing-masing inp
 	$(id).html(message);
 
 };
+
+function isPassword(password){
+	return /^(?=.*[\d])(?=.*[A-Z])/.test(password);
+}
 
 function isName(name){ // regular expression nama
     return /^[A-Za-z\s]+$/.test(name);

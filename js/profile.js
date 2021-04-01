@@ -85,7 +85,7 @@ $("#addMoodButton").click(function(){ // validasi penambahan mood
             $("#mood-toggle").html("Show Options");
             $("#mood-toggle").removeClass("hide-toggle");
             $(".add-mood").slideUp(1000);
-}
+        }
         addMood(moodId, moodDesc);
         $(".add-mood").slideUp(1000);
     }
